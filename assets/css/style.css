@@ -1,0 +1,40 @@
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+.category-container{
+    height: 30px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 20px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.category-container-selected{
+    background: black;
+    color: white;
+}
+
+.news-container{
+    margin: 20px;
+}
+
+.news-title{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.news-date-container{
+    font-size: 20px;
+}
+
+.news-content-container{
+    font-size: 20px;
+}
+

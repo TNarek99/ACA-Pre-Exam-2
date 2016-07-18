@@ -1,0 +1,14 @@
+.add-news-input{
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 0%;
+    margin-bottom: 20px;
+}
+
+.add-news-submit{
+    width: 30%;
+    margin-left: 35%;
+    height: auto;
+    margin-bottom: 20px;
+}
+

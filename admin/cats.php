@@ -61,7 +61,7 @@ include 'header.php';
                             echo "</td>";
                         }
                         echo "<td class = 'right-col'>";
-                        echo '<a class = "btn btn-danger" href = "index.php?link=categories&page='.$currentPage.'&del='.$categories[$index]["id"].'">Delete Category <span class = "glyphicon glyphicon-trash"></span></a>';
+                        echo '<a onclick = "confirmation(this.id)" class = "btn btn-danger" id = "index.php?link=categories&page='.$currentPage.'&del='.$categories[$index]["id"].'">Delete Category <span class = "glyphicon glyphicon-trash"></span></a>';
                         echo "</td>";
                         echo "</tr>";
                     }
@@ -132,6 +132,8 @@ include 'header.php';
     </div>
 
 </div>
+
 </body>
 <script src = "../assets/script/admin_add_cat.js"></script>
+<script src = "../assets/script/admin_confirmation.js"></script>
 </html>

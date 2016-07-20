@@ -1,7 +1,7 @@
 <?php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'password');
+define('DB_PASSWORD', 'qrtmnkl1205');
 define('DB_NAME', 'aca-pre-exam-2');
 
 // Create connection

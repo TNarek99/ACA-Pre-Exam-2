@@ -9,7 +9,7 @@ $catTitle = $_POST['category'];
 $category = getCatByTitle($catTitle);
 $image = "default.png";
 
-if (isset($_FILES['image'])){
+if (strlen($_FILES['image']['name']) > 0){
     define("UPLOAD_DIR", "../assets/news_images/");
 
     if (!empty($_FILES["image"])) {

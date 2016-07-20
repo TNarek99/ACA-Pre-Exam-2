@@ -51,6 +51,12 @@ include 'header.php';
 
                 foreach ($news as $new){
                     echo '<div class = "news-container">';
+                    echo '<div class = "news-left-container">';
+                    echo '<div class = "news-image-container">';
+                    echo '<img class = "news-image" src = "../assets/news_images/'.$new['image'].'">';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class = "news-right-container">';
                     echo '<div class = "news-title-container">';
                     echo '<h2 class = "news-title">';
                     echo $new['title'];
@@ -62,8 +68,12 @@ include 'header.php';
                     echo '<div class = "news-content-container">';
                     echo $new['content'];
                     echo '</div>';
-                    echo '<hr>';
                     echo '</div>';
+                    echo '<div class = "clear">';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<br>';
+                    echo '<hr>';
                 }
 
                 ?>

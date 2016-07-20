@@ -5,7 +5,7 @@ require_once 'connection.php';
 function getNews(){
     global $dbConnection;
 
-    $sql = "SELECT news.id, news.title as news_title, news.content, news.date, cats.title AS cat_title FROM news INNER JOIN cats ON news.category_id = cats.id";
+    $sql = "SELECT news.id, news.image, news.title as news_title, news.content, news.date, cats.title AS cat_title FROM news INNER JOIN cats ON news.category_id = cats.id";
 
     $result = mysqli_query($dbConnection, $sql);
 
@@ -21,7 +21,7 @@ function getNews(){
 function getNewsByCatId($catId){
     global $dbConnection;
 
-    $sql = "SELECT id, title, content, date, category_id FROM news WHERE category_id = '".$catId."'";
+    $sql = "SELECT id, image, title, content, date, category_id FROM news WHERE category_id = '".$catId."'";
 
     $result = mysqli_query($dbConnection, $sql);
 
@@ -34,10 +34,26 @@ function getNewsByCatId($catId){
     return $news;
 }
 
-function setNews($title, $content, $categoryId){
+function getNewsById($id){
     global $dbConnection;
 
-    $sql = "INSERT INTO news (`title`, `content`, `category_id`) VALUES('".$title."', '".$content."', '".$categoryId."')";
+    $sql = "SELECT id, image, title, content, date, category_id FROM news WHERE id = '".$id."'";
+
+    $result = mysqli_query($dbConnection, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $news = $row;
+        }
+    }
+
+    return $news;
+}
+
+function setNews($image, $title, $content, $categoryId){
+    global $dbConnection;
+
+    $sql = "INSERT INTO news (`image`, `title`, `content`, `category_id`) VALUES('".$image."', '".$title."', '".$content."', '".$categoryId."')";
 
     $result = mysqli_query($dbConnection, $sql);
 

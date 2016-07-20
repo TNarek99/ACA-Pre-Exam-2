@@ -25,6 +25,28 @@ a:hover{
     margin: 20px;
 }
 
+.news-left-container{
+    float: left;
+    display: inline-block;
+    width: 40%;
+}
+
+.news-right-container{
+    float: right;
+    display: inline-block;
+    width: 50%;
+}
+
+.news-image-container{
+    margin: 20px;
+    display: inline-block;
+}
+
+.news-image{
+    width: 200px;
+    height: 100%;
+}
+
 .news-title{
     font-weight: bold;
     font-size: 30px;
@@ -38,3 +60,7 @@ a:hover{
     font-size: 20px;
 }
 
+.clear{
+    clear: both;
+    display: block;
+}
